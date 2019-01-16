@@ -3,19 +3,80 @@
   <head>
     <meta charset="utf-8">
     <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="./CSS/style.css"/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   </head>
   <body>
-    <div id="root"></div>
-    <!-- <script src="./data/injuries/injuries.js"></script> -->
-    <!-- <script src="./data/pokemon/pokemon.js"></script> -->
-    <!-- <script src="./data/steam/steam.js"></script> -->
-    <!-- <script src="./data/worldbank/worldbank.js"></script> -->
-    <!-- <script src="./data/lol/lol.js"></script> -->
+	<header> <!-- logo y nav-->
+
+	</header>
+<section class="container">
+	<p>Filtrar por huevo:</p>
+    <!-- Select con opciones que se manejarán desde el DOM -->
+    <select id="egg">
+      <option value="seleccionar">Egg...</option>
+      <option value="2 km">"2 km"</option>
+      <option value="5 km">"5 km"</option>
+      <option value="10 km">"10 km"</option>
+      <option value="Not in Eggs">"Not in Eggs"</option>
+		</select>
+			<select id="type">
+					<option value="" disabled selected>Seleccionar</option>
+					<option value="0">Ver Todos</option>
+					<option value="Water">Agua</option>
+					<option value="Bug">Bicho</option>
+					<option value="Dragon">Dragón</option>
+					<option value="Electric">Eléctrico</option>
+					<option value="Ghost">Fantasma</option>
+					<option value="Fire">Fuego</option>
+					<option value="Ice">Hielo</option>
+					<option value="Grass">Hierba</option>
+					<option value="Fighting">Luchador</option>
+					<option value="Normal">Normal</option>
+					<option value="Psychic">Psíquico</option>
+					<option value="Rock">Roca</option>
+					<option value="Ground">Tierra</option>
+					<option value="Poison">Veneno</option>
+					<option value="Flying">Volador</option>
+				</select> 
+
+	</section>
+
+    <div id="root" class="container-fluid"> 
+
+		<!-- <button id="btn">nombre pokemon</button> -->
+
+	</div>
+<!--  así quiero mis targetas con cada pokemon
+	<section class="container-fluid"> 
+		<div class="card-group">
+			<div class="card">
+				<img src="..." class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">monbre pokemon</h5>
+					<p class="card-text"> evolucion</p><br>
+					<p class="card-text"> egg (huevo)</p><br>
+				</div>
+			</div>
+			
+		</div>
+	</section>
+-->
+
+
+	<div id="pru">
+
+		<button id="eba" class="text-aline-center">VOLVER</button>
+
+	</div> 
+	
+	<!-- jQuery para bootstrap -->
+  	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  	<!-- CDN Bootstrap -->
+  	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="./data/pokemon/pokemon.js"></script> 
     <script src="./JS/data.js"></script>
 	<script src="./JS/main.js"></script>
-	<script src="./JS/jquery.js"></script>
-	<script src="./JS/boots.js"></script>
   </body>
 </html>
 
