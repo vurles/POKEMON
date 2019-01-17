@@ -25,10 +25,11 @@ document.getElementById('eba').addEventListener('click', () => {
 //const resultadoNombres = nombrePokemones(data); // funcion donde me muestra los nombres de los pokemones que talves ocupe
 //const huevoPokemon = filtroHuevo(data, condition); //filtro pokemon por tipo huevo
 
-const data = (POKEMON.pokemon)
+const data = POKEMON.pokemon;
 const containerPokemon = document.getElementById('root');// donde contendre mis cartas con pokemon
-const selectEgg = document.getElementById('egg');// selecc con kilometros pokemon
-const selectType = document.getElementById('type')
+//const selectEgg = document.getElementById('egg');// selecc con kilometros pokemon
+const selectType = document.getElementById('type');//select de los tipos pokemon
+const ordenando = document.getElementById('ordenar');
 
 const showData = (data) => {
 	let result = '';
@@ -74,7 +75,7 @@ const showData = (data) => {
 			</div>
 			<h2>${element.name}<br><span>${element.egg}</span></h2>
 			<p>TIPO : ${element.type}</p>
-			<p>DEVILIDAD : ${element.weaknesses}</p>
+			<p>DEBILIDAD : ${element.weaknesses}</p>
 		  </div>
 		</div>
 	  </div>` 
@@ -159,6 +160,31 @@ const showData = (data) => {
         }
     })
 });
+
+ordenando.addEventListener('change', ()=>{
+ let condition = ordenando.value;
+ let orderAZ = orderPokemon(data,condition);
+
+ containerPokemon=innerHTML='';
+
+ orderAZ.forEach(element =>{
+	 containerPokemon.innerHTML += `
+	 <div>
+	 <div class="card">
+		 <div class="box">
+		 <div class="img">
+			 <img src="${element.img}">
+		 </div>
+		 <h2>${element.name}<br><span>${element.egg}</span></h2>
+		 <p>TIPO : ${element.type}</p>
+		 <p>DEBILIDAD : ${element.weaknesses}</p>
+		 </div>
+	 </div>
+	 </div>` 
+ })
+
+});
+
 
   window.onload = showData(data);
 
