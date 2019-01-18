@@ -33,6 +33,9 @@ const filtroHuevo = (data, condition) => {
 };
 // fin filtro huevos
 
+
+// filtro por pokrmon
+
 const filterPokemon = (data , condition) => {
 	if (condition === "0") {
 			return data; 
@@ -43,6 +46,17 @@ const filterPokemon = (data , condition) => {
 	});
 	return filteredPokemons;
 };
+window.filterPokemon = filterPokemon;
+// funcion ordenar mediante ej. staroverflow 
+
+const orderPokemon = (data, condition)=> {
+	const ordered = data.sort((a,b)=> (a[condition] > b[condition]) ? 1 : -1 );
+return ordered;
+}
+//const orderPokemon data.sort((a, b) => (a[name] -  b[name]))
+
 
 //window.tipoPokemon = tipoPokemon;
 //window.nombrePokemones = nombrePokemones;
+
+window.orderPokemon = orderPokemon;
