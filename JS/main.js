@@ -163,9 +163,9 @@ const showData = (data) => {
 
 ordenando.addEventListener('change', ()=>{
  let condition = ordenando.value;
- let orderAZ = orderPokemon(data,condition);
+ let orderAZ = window.orderPokemon(data,condition);
 
- containerPokemon=innerHTML='';
+ containerPokemon.innerHTML='';
 
  orderAZ.forEach(element =>{
 	 containerPokemon.innerHTML += `
@@ -184,6 +184,7 @@ ordenando.addEventListener('change', ()=>{
  })
 
 });
+
 
 
   window.onload = showData(data);
