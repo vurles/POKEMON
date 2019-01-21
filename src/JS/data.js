@@ -30,7 +30,7 @@ const filtroHuevo = (data, condition) => {
     return element.egg === condition
   })
   return filtrandoHuevo;
-};
+},
 // fin filtro huevos
 
 
@@ -45,8 +45,8 @@ const filterPokemon = (data , condition) => {
 			else if (element.type[1] === condition) return element.type[1] === condition;
 	});
 	return filteredPokemons;
-};
-window.filterPokemon = filterPokemon;
+}
+window.filterPokemon = filterPokemon
 // funcion ordenar mediante ej. staroverflow 
 
 const orderPokemon = (data, condition)=> {
@@ -54,9 +54,12 @@ const orderPokemon = (data, condition)=> {
 return ordered;
 }
 //const orderPokemon data.sort((a, b) => (a[name] -  b[name]))
-
+//Funcion de calculo. Cuenta cuantos pokemones hay
+//const sumarTotal: (data) => {
+   // return data.length;
+  //}
 
 //window.tipoPokemon = tipoPokemon;
 //window.nombrePokemones = nombrePokemones;
 
-window.orderPokemon = orderPokemon;
+window.orderPokemon = orderPokemon
